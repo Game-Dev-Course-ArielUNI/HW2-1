@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class disappearing : MonoBehaviour
 {
-   // [SerializeField]
+    // [SerializeField]
     [Tooltip("The button for the dragon to disappear.")]
     public InputAction toggleAction = new InputAction(type: InputActionType.Button);
 
@@ -11,10 +11,7 @@ public class disappearing : MonoBehaviour
 
     void OnEnable()
     {
-        // Enable the toggle action and subscribe to the performed event
-        //toggleAction.Enable();
-        //toggleAction.performed += OnToggleVisibility;
-        toggleAction.AddBinding("<Pointer>/press"); 
+        toggleAction.AddBinding("<Pointer>/press");
         toggleAction.Enable();
         toggleAction.performed += OnToggleVisibility;
     }
